@@ -1,9 +1,10 @@
 {
   "name": "sew-many-images",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "responsive css sprites generator",
   "main": "index.js",
   "scripts": {
+    "prepublishOnly": "npm run build",
     "test": "jest src",
     "coverage": "jest --collectCoverageFrom=src/**.js --coverage src",
     "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
@@ -26,6 +27,11 @@
     "rimraf": "^2.6.2"
   },
   "author": "Ten Zhi Yang",
+  "keywords": [
+    "javascript",
+    "cli",
+    "image-sprites"
+  ],
   "license": "MIT",
   "dependencies": {
     "app-root-path": "^2.1.0",
